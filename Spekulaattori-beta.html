@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>YO-Spekulaattori</title>
+<style>
+body {
+  background-color: red;
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#ytl {
+    margin-bottom: 20px;
+}
+.slidecontainer {
+  width: 100%;
+}
+#valinnainen {
+    color: white;
+}
+</style>
+</head>
+<body>
+<h1>YO-Spekulaattori</h1>
+<p>YO-Spekulaattorin avulla vertailet helposti omia YO-pisteitä aikaisempien vuosien pisterajoihin</p>
+<img id="ytl" src="https://i.imgur.com/lcCVE4u.png" alt="spekulaattori logo" style="width:250px">
+<form action="/action_page.php" id="pistemäärä">
+  Pistemäärä:<input type="text" name="pisteet">
+  <input type="submit">
+</form>
+<br>
+<select id="ainevalikko">
+  <option value="Matematiikka">Matematiikka</option>
+  <option value="Fysiikka">Fysiikka</option>
+  <option value="Kemia">Kemia</option>
+  <option value="Äidinkieli">Äidinkieli</option>
+</select>
+</form>
+<select id="vuosivalikko">
+  <option value="2019">2019</option>
+  <option value="2018">2018</option>
+  <option value="2017">2017</option>
+  <option value="2016">2016</option>
+</select>
+<select id="kausivalikko">
+  <option value="Kevät">Kevät</option>
+  <option value="Syksy">Syksy</option>
+</select>
+<br>
+<br>
+<button type="Max" onclick="alert('Maksimi arvosana')">Max</button>
+<button type="Min" onclick="alert('Minimi arvosana')">Min</button>
+<button type="Avg" onclick="alert('Keskiarvo arvosana')">Avg</button>
+<div class="slidecontainer">
+        <p id="valinnainen">Kuinka tiukasti opettajasi on pisteyttänyt:</p>
+        <input type="range" min="1" max="100" value="50">
+</body>
+</html>

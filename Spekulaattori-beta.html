@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>YO-Spekulaattori</title>
 <style>
 body {
+  overflow-y : auto;
   background-color: red;
   text-align: center;
   color: white;
@@ -18,17 +20,42 @@ body {
 #valinnainen {
     color: white;
 }
+.arvosana {
+  text-align: center;
+  width: 50px;
+  border: 5px solid white;
+  padding: 10px;
+  margin: 0 auto;
+}
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+#content-wrap {
+  padding-bottom: 65px;    /* Footer height */
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 65px;            /* Footer height */
+  font-family: monospace;
+  color: rgb(255, 0, 0);
+  text-align: center;
+  background-color: white;
+}
 </style>
 </head>
 <body>
+    <div id="page-container">
+    <div id="content-wrap">
 <h1>YO-Spekulaattori</h1>
 <p>YO-Spekulaattorin avulla vertailet helposti omia YO-pisteitä aikaisempien vuosien pisterajoihin</p>
 <img id="ytl" src="https://i.imgur.com/lcCVE4u.png" alt="spekulaattori logo" style="width:250px">
-<form action="/action_page.php" id="pistemäärä">
+<form id="pistemäärä">
   Pistemäärä:<input type="text" name="pisteet">
-  <input type="submit">
 </form>
-<br>
+<p>Mihin haluat verrata pisteitäsi?</p>
 <select id="ainevalikko">
   <option value="Matematiikka">Matematiikka</option>
   <option value="Fysiikka">Fysiikka</option>
@@ -47,12 +74,24 @@ body {
   <option value="Syksy">Syksy</option>
 </select>
 <br>
-<br>
+<!--
 <button type="Max" onclick="alert('Maksimi arvosana')">Max</button>
 <button type="Min" onclick="alert('Minimi arvosana')">Min</button>
 <button type="Avg" onclick="alert('Keskiarvo arvosana')">Avg</button>
+-->
 <div class="slidecontainer">
         <p id="valinnainen">Kuinka tiukasti opettajasi on pisteyttänyt:</p>
         <input type="range" min="1" max="100" value="50">
+<br>
+<br>
+<button action="/action_page.php" id="vertaa-nappi">Vertaa</button>
+<p>Arvosanasi:</p>
+<div class="arvosana">X</div>
+</div>
+<footer id="footer">
+  <p>Jukka Knuutinen & Joona Kotaluoto</p>
+  <p>2019 YO-Spekulaattori®</p>
+</footer>
+</div>
 </body>
 </html>

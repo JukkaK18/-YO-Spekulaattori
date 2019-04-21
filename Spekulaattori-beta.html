@@ -52,24 +52,23 @@ body {
 <h1>YO-Spekulaattori</h1>
 <p>YO-Spekulaattorin avulla vertailet helposti omia YO-pisteitä aikaisempien vuosien pisterajoihin</p>
 <img id="ytl" src="https://i.imgur.com/lcCVE4u.png" alt="spekulaattori logo" style="width:250px">
-<form id="pistemäärä">
-  Pistemäärä:<input type="text" name="pisteet">
+<form id="pistemäärä" form action="/action_page.php" method="GET">
+  Pistemäärä:<input type="number" name="pisteet">
 </form>
 <p>Mihin haluat verrata pisteitäsi?</p>
-<select id="ainevalikko">
+<select name="aine" id="ainevalikko" form="pistemäärä">
   <option value="Matematiikka">Matematiikka</option>
   <option value="Fysiikka">Fysiikka</option>
   <option value="Kemia">Kemia</option>
   <option value="Äidinkieli">Äidinkieli</option>
 </select>
-</form>
-<select id="vuosivalikko">
+<select name="vuosi" id="vuosivalikko" form="pistemäärä">
   <option value="2019">2019</option>
   <option value="2018">2018</option>
   <option value="2017">2017</option>
   <option value="2016">2016</option>
 </select>
-<select id="kausivalikko">
+<select name="kausi" id="kausivalikko" form="pistemäärä">
   <option value="Kevät">Kevät</option>
   <option value="Syksy">Syksy</option>
 </select>
@@ -81,12 +80,12 @@ body {
 -->
 <div class="slidecontainer">
         <p id="valinnainen">Kuinka tiukasti opettajasi on pisteyttänyt:</p>
-        <input type="range" min="1" max="100" value="50">
+        <input name="liukuri" type="range" min="1" max="100" value="50" form="pistemäärä">
 <br>
 <br>
-<button action="/action_page.php" id="vertaa-nappi">Vertaa</button>
+<input id="button" type="submit" value="Vertaa" form="pistemäärä">
 <p>Arvosanasi:</p>
-<div class="arvosana">X</div>
+<div class="arvosana">M</div>
 </div>
 <footer id="footer">
   <p>Jukka Knuutinen & Joona Kotaluoto</p>

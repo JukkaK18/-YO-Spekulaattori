@@ -220,7 +220,7 @@ select::-ms-expand {
 <img id="ytl" src="https://i.imgur.com/Ssmyaa2.png" alt="spekulaattori logo" style="width:250px">
 <form id="pistemäärä" form action="/action_page.php" method="GET">
   Pistemäärä:<br> <br>
-  <input type="number" name="pisteet">
+  <input type="number" min="0" max="120" name="pisteet">
 </form>
 <p>Mihin haluat verrata pisteitäsi?</p>
 <select name="aine" id="ainevalikko" form="pistemäärä">

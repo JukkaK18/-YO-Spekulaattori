@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="jquery-3.4.0.js"></script>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <title>YO-Countdown</title>
     <style>
 body {
@@ -63,9 +65,85 @@ body {
     transform: none;
   }
 }
+#laatikko {
+    border: 2px solid #e50000;
+    padding: 10px;
+    width: 250px;
+    margin: 0 auto;
+}
+#demo {
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #e50000;
+}
+#aineetlaatikko {
+    border: 2px solid #e50000;
+    padding: 10px;
+    width: 250px;
+    margin: 0 auto;
+}
+#aineet1 {
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #e50000;
+}
+#aineet2 {
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #e50000;
+}
+#aineet3 {
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #e50000;
+}
+#aineet4 {
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #e50000;
+}
+#aineet5 {
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #e50000;
+}
+#aineet6 {
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #e50000;
+}
+#aineet7 {
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #e50000;
+}
+#aineet8 {
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #e50000;
+}
+#aineet9 {
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #e50000;
+}
+.päivät {
+  font-weight: bold;
+  color: #e50000;
+}
 select {
   margin: 10px;
-  width: 150px;
+  width: 300px;
   padding: 5px 35px 5px 5px;
   font-size: 16px;
   border: 1px solid white;
@@ -73,7 +151,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url(https://i.imgur.com/tQgWQij.png) 96% / 15% no-repeat #eee;
+  background: url(https://i.imgur.com/tQgWQij.png) 96% / 10% no-repeat #eee;
 }
 
 select::-ms-expand { 
@@ -131,19 +209,19 @@ select::-ms-expand {
       <!-- Top navigation -->
 <div class="topnav">
 
-        <!-- Centered link -->
+        <!-- Cente#e50000 link -->
         <div class="topnav-centered">
-          <a href="index.html" class="active">YO-Spekulaattori</a>
+          <a href="index.php" class="active">YO-Spekulaattori</a>
         </div>
         
         <!-- Left-aligned links (default) -->
-        <a href="pisteiden_vertailu.html">YO-Leaderboard</a>
-        <a href="Yhteystiedot.html">Yhteydenotto</a>
+        <a href="pisteiden_vertailu.php">YO-Leaderboard</a>
+        <a href="Yhteystiedot.php">Kehitysideat</a>
         
         <!-- Right-aligned links -->
         <div class="topnav-right">
-          <a href="yo-countdown1.html">YO-Countdown</a>
-          <a href="Tietoja.html">Tietoja</a>
+          <a href="yo-countdown.php">YO-Countdown</a>
+          <a href="FAQ.php">F.A.Q</a>
         </div>
  </div>     
 <div id="page-container">  
@@ -151,8 +229,8 @@ select::-ms-expand {
   <h1>YO-Countdown</h1>
   <p>Valitse aine ja katso kuinka kauan aikaa on koepäivään</p>
   <img id="ycl" src="https://i.imgur.com/1P0Y5i4.png" alt="yo-countdown logo" style="width:250px">
-  <form id="ajastin-aine" form action="yo-countdown-form-page.php">
-  <select name="aine" id="ainevalikko" form="ajastin-aine">
+<form id="ajastin-aine">
+ <select name="aine" id="ainevalikko" form="ajastin-aine" required>
     <option value="Äidinkielen lukutaidon koe, suomi">Äidinkielen lukutaidon koe, suomi</option>
     <option value="Äidinkielen lukutaidon koe, ruotsi">Äidinkielen lukutaidon koe, ruotsi</option>
     <option value="Äidinkielen kirjoitustaidon koe, suomi">Äidinkielen kirjoitustaidon koe, suomi</option>
@@ -171,7 +249,6 @@ select::-ms-expand {
     <option value="Ranska, pitkä oppimäärä">Ranska, pitkä oppimäärä</option>
     <option value="Venäjä, pitkä oppimäärä">Venäjä, pitkä oppimäärä</option>
     <option value="Espanja, pitkä oppimäärä">Espanja, pitkä oppimäärä</option>
-    <option value="Latina, laajempi oppimäärä">Latina, laajempi oppimäärä</option>
     <option value="Saksa, lyhyt oppimäärä">Saksa, lyhyt oppimäärä</option>
     <option value="Englanti, lyhyt oppimäärä">Englanti, lyhyt oppimäärä</option>
     <option value="Ranska, lyhyt oppimäärä">Ranska, lyhyt oppimäärä</option>
@@ -196,13 +273,98 @@ select::-ms-expand {
     <option value="Terveystieto">Terveystieto</option>        
       </select>
   </form>
-    <br>
-    <br>
-    <button class="button1" type="submit" form="ajastin-aine">Aikaa jäljellä</button>
+  <br>
+  <br>
+  <script>
+$(function() {
+    $('#aineet1, #aineet2, #aineet3, #aineet4, #aineet5, #aineet6, #aineet7, #aineet8, #aineet9').hide(); 
+    $('#ainevalikko').change(function(){
+        if($('#ainevalikko').val() == 'Englanti, lyhyt oppimäärä' || $('#ainevalikko').val() == 'Ranska, lyhyt oppimäärä' || $('#ainevalikko').val() == 'Espanja, lyhyt oppimäärä' || $('#ainevalikko').val() == 'Saksa, lyhyt oppimäärä' || $('#ainevalikko').val() == 'Venäjä, lyhyt oppimäärä' || $('#ainevalikko').val() == 'Italia, lyhyt oppimäärä' || $('#ainevalikko').val() == 'Portugali, lyhyt oppimäärä' || $('#ainevalikko').val() == 'Latina, lyhyt oppimäärä' || $('#ainevalikko').val() == 'Pohjoissaame, lyhyt oppimäärä' || $('#ainevalikko').val() == 'Koltansaame, lyhyt oppimäärä') {
+            $('#aineet1').show(); 
+            $('#aineet2, #aineet3, #aineet4, #aineet5, #aineet6, #aineet7, #aineet8, #aineet9').hide();
+            var päivä1 = document.getElementById('päivämäärät');
+            päivä1.innerHTML = '<p class="päivät">16.9.2019</p>';
+        } 
+        else if ($('#ainevalikko').val() == 'Äidinkielen lukutaidon koe, suomi' || $('#ainevalikko').val() == 'Äidinkielen lukutaidon koe, ruotsi') {
+            $('#aineet2').show(); 
+            $('#aineet1, #aineet3, #aineet4, #aineet5, #aineet6, #aineet7, #aineet8, #aineet9').hide();
+            var päivä2 = document.getElementById('päivämäärät');
+            päivä2.innerHTML = '<p class="päivät">18.9.2019</p>';
+        }
+        else if ($('#ainevalikko').val() == 'Englanti, pitkä oppimäärä' || $('#ainevalikko').val() == 'Saksa, pitkä oppimäärä' || $('#ainevalikko').val() == 'Ranska, pitkä oppimäärä' || $('#ainevalikko').val() == 'Venäjä, pitkä oppimäärä' || $('#ainevalikko').val() == 'Espanja, pitkä oppimäärä') {
+            $('#aineet3').show(); 
+            $('#aineet1, #aineet2, #aineet4, #aineet5, #aineet6, #aineet7, #aineet8, #aineet9').hide();
+            var päivä3 = document.getElementById('päivämäärät');
+            päivä3.innerHTML = '<p class="päivät">20.9.2019</p>';
+        }
+        else if ($('#ainevalikko').val() == 'Äidinkielen koe, pohjoissaame') {
+            $('#aineet4').show(); 
+            $('#aineet1, #aineet2, #aineet3, #aineet5, #aineet6, #aineet7, #aineet8, #aineet9').hide();
+            var päivä4 = document.getElementById('päivämäärät');
+            päivä4.innerHTML = '<p class="päivät">23.9.2019</p>';
+        }
+        else if ($('#ainevalikko').val() == 'Matematiikan koe, pitkä oppimäärä' || $('#ainevalikko').val() == 'Matematiikan koe, lyhyt oppimäärä') {
+            $('#aineet5').show(); 
+            $('#aineet1, #aineet2, #aineet3, #aineet4, #aineet6, #aineet7, #aineet8, #aineet9').hide();
+            var päivä5 = document.getElementById('päivämäärät');
+            päivä5.innerHTML = '<p class="päivät">24.9.2019</p>';
+        }
+        else if ($('#ainevalikko').val() == 'Psykologia' || $('#ainevalikko').val() == 'Filosofia' || $('#ainevalikko').val() == 'Historia' || $('#ainevalikko').val() == 'Fysiikka' || $('#ainevalikko').val() == 'Biologia') {
+            $('#aineet6').show(); 
+            $('#aineet1, #aineet2, #aineet3, #aineet4, #aineet5, #aineet7, #aineet8, #aineet9').hide();
+            var päivä6 = document.getElementById('päivämäärät');
+            päivä6.innerHTML = '<p class="päivät">26.9.2019</p>';
+        }
+        else if ($('#ainevalikko').val() == 'Ruotsi, pitkä oppimäärä' || $('#ainevalikko').val() == 'Ruotsi, keskipitkä oppimäärä' || $('#ainevalikko').val() == 'Suomi, pitkä oppimäärä' || $('#ainevalikko').val() == 'Suomi, keskipitkä oppimäärä') {
+            $('#aineet7').show(); 
+            $('#aineet1, #aineet2, #aineet3, #aineet4, #aineet5, #aineet6, #aineet8, #aineet9').hide();
+            var päivä7 = document.getElementById('päivämäärät');
+            päivä7.innerHTML = '<p class="päivät">27.9.2019</p>';
+        }
+        else if ($('#ainevalikko').val() == 'Suomi toisena kielenä' || $('#ainevalikko').val() == 'Ruotsi toisena kielenä' || $('#ainevalikko').val() == 'Äidinkielen kirjoitustaidon koe, suomi' || $('#ainevalikko').val() == 'Äidinkielen kirjoitustaidon koe, ruotsi') {
+            $('#aineet8').show(); 
+            $('#aineet1, #aineet2, #aineet3, #aineet4, #aineet5, #aineet6, #aineet7, #aineet9').hide();
+            var päivä8 = document.getElementById('päivämäärät');
+            päivä8.innerHTML = '<p class="päivät">1.10.2019</p>';
+        }
+        else if ($('#ainevalikko').val() == 'Evankelis-luterilainen uskonto' || $('#ainevalikko').val() == 'Ortodoksinen uskonto' || $('#ainevalikko').val() == 'Elämänkatsomustieto' || $('#ainevalikko').val() == 'Yhteiskuntaoppi' || $('#ainevalikko').val() == 'Kemia' || $('#ainevalikko').val() == 'Maantiede' || $('#ainevalikko').val() == 'Terveystieto') {
+            $('#aineet9').show(); 
+            $('#aineet1, #aineet2, #aineet3, #aineet4, #aineet5, #aineet6, #aineet7, #aineet8').hide();
+            var päivä9 = document.getElementById('päivämäärät');
+            päivä9.innerHTML = '<p class="päivät">3.10.2019</p>';
+        }
+        else {
+            $('#aineet1, #aineet2, #aineet3, #aineet4, #aineet5, #aineet6, #aineet7, #aineet8, #aineet9').hide(); 
+        } 
+    });
+});
+</script>
+    <div id="aineetlaatikko">
+    <p id=aineet1></p>
+    <p id=aineet2></p>
+    <p id=aineet3></p>
+    <p id=aineet4></p>
+    <p id=aineet5></p>
+    <p id=aineet6></p>
+    <p id=aineet7></p>
+    <p id=aineet8></p>
+    <p id=aineet9></p>
+    <span id="päivämäärät"></span>
+    </div>
 </div>
 <footer id="footer">
   <p><a id="ig-linkki" href="https://www.instagram.com/jukka.knuutinen/?hl=fi">Jukka Knuutinen</a></p>
         <p>2019 YO-Spekulaattori®</p>
       </footer>
       </div>
+      <script src="aineet1.js"></script>
+      <script src="aineet2.js"></script>
+      <script src="aineet3.js"></script>
+      <script src="aineet4.js"></script>
+      <script src="aineet5.js"></script>
+      <script src="aineet6.js"></script>
+      <script src="aineet7.js"></script>
+      <script src="aineet8.js"></script>
+      <script src="aineet9.js"></script>
+
   </body>
